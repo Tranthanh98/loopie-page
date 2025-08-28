@@ -1,73 +1,105 @@
-# Welcome to your Lovable project
+# Loopie - Chia sẻ khoảnh khắc với những người thân yêu
 
-## Project info
+> Ứng dụng chụp và chia sẻ hình ảnh nhanh chóng với close friends của bạn
 
-**URL**: https://lovable.dev/projects/38804eb7-4ad8-497a-8610-08f2344489a7
+## Giới thiệu
 
-## How can I edit this code?
+Loopie là một ứng dụng đơn giản và tiện lợi giúp bạn:
+- 📸 Chụp ảnh nhanh chóng với giao diện thân thiện
+- 👥 Chia sẻ khoảnh khắc đặc biệt với những người bạn thân
+- ⚡ Gửi hình ảnh tức thì mà không cần qua nhiều bước phức tạp
+- 🔒 Bảo mật và riêng tư - chỉ những người bạn tin tưởng mới có thể xem
 
-There are several ways of editing your application.
+## Tính năng chính
 
-**Use Lovable**
+- **Chụp ảnh nhanh**: Giao diện camera đơn giản, dễ sử dụng
+- **Danh sách bạn thân**: Quản lý danh sách close friends một cách dễ dàng
+- **Chia sẻ tức thì**: Gửi ảnh ngay lập tức sau khi chụp
+- **Giao diện thân thiện**: Thiết kế hiện đại, responsive trên mọi thiết bị
+- **Đa ngôn ngữ**: Hỗ trợ tiếng Việt và tiếng Anh
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/38804eb7-4ad8-497a-8610-08f2344489a7) and start prompting.
+## Cài đặt và phát triển
 
-Changes made via Lovable will be committed automatically to this repo.
+Yêu cầu hệ thống:
+- Node.js (phiên bản 16 trở lên)
+- pnpm (khuyến nghị) hoặc npm
 
-**Use your preferred IDE**
+### Bước 1: Clone repository
+```bash
+git clone <repository-url>
+cd loopie-page
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Bước 2: Cài đặt dependencies
+```bash
+pnpm install
+# hoặc
+npm install
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Bước 3: Chạy development server
+```bash
+pnpm dev
+# hoặc
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Ứng dụng sẽ chạy tại `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Công nghệ sử dụng
 
-**Use GitHub Codespaces**
+Dự án được xây dựng với các công nghệ hiện đại:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Frontend Framework**: React 18 với TypeScript
+- **Build Tool**: Vite - build tool nhanh và hiện đại
+- **UI Components**: shadcn/ui - thư viện component đẹp và tùy biến cao
+- **Styling**: Tailwind CSS - utility-first CSS framework
+- **State Management**: React Context API
+- **Responsive Design**: Mobile-first approach
 
-## What technologies are used for this project?
+## Cấu trúc dự án
 
-This project is built with:
+```
+src/
+├── components/          # Các component tái sử dụng
+│   ├── ui/             # UI components từ shadcn/ui
+│   └── pages/          # Page-specific components
+├── pages/              # Các trang chính
+├── contexts/           # React Context providers
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+└── assets/             # Hình ảnh và tài nguyên tĩnh
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Scripts có sẵn
 
-## How can I deploy this project?
+```bash
+# Chạy development server
+pnpm dev
 
-Simply open [Lovable](https://lovable.dev/projects/38804eb7-4ad8-497a-8610-08f2344489a7) and click on Share -> Publish.
+# Build cho production
+pnpm build
 
-## Can I connect a custom domain to my Lovable project?
+# Preview build
+pnpm preview
 
-Yes, you can!
+# Lint code
+pnpm lint
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Đóng góp
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Chúng tôi hoan nghênh mọi đóng góp! Vui lòng:
+1. Fork repository
+2. Tạo feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Tạo Pull Request
+
+## Liên hệ
+
+Nếu bạn có bất kỳ câu hỏi nào, vui lòng tạo issue hoặc liên hệ với team phát triển.
+
+---
+
+*Được xây dựng với ❤️ cho cộng đồng*
