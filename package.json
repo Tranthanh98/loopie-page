@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://thanhtran.github.io/loopie-page",
+  "homepage": "https://tranthanh98.github.io/loopie-page/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
