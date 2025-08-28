@@ -1,7 +1,8 @@
-import { useState } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { Button } from '@/components/ui/button';
-import { Menu, X, Globe } from 'lucide-react';
+import logo from "@/assets/logo.png";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
 interface HeaderProps {
   currentPage: string;
@@ -13,11 +14,11 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
   const { language, setLanguage, t } = useLanguage();
 
   const navigationItems = [
-    { key: 'about', label: t('nav.about') },
-    { key: 'terms', label: t('nav.terms') },
-    { key: 'privacy', label: t('nav.privacy') },
-    { key: 'help', label: t('nav.help') },
-    { key: 'cookies', label: t('nav.cookies') },
+    { key: "about", label: t("nav.about") },
+    { key: "terms", label: t("nav.terms") },
+    { key: "privacy", label: t("nav.privacy") },
+    { key: "help", label: t("nav.help") },
+    { key: "cookies", label: t("nav.cookies") },
   ];
 
   return (
@@ -25,12 +26,15 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <button
-            onClick={() => onNavigate('about')}
-            className="text-2xl font-bold gradient-text hover:scale-105 transition-transform duration-300"
-          >
-            MyApp
-          </button>
+          <div className="flex items-center space-x-3">
+            <img src={logo} alt="Loopie Logo" className="h-10" />
+            <button
+              onClick={() => onNavigate("about")}
+              className="text-2xl font-bold gradient-text hover:scale-105 transition-transform duration-300"
+            >
+              Loopie
+            </button>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
@@ -41,9 +45,10 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
                 onClick={() => onNavigate(item.key)}
                 className={`
                   relative px-4 py-2 rounded-full transition-all duration-300
-                  ${currentPage === item.key 
-                    ? 'bg-golden text-background shadow-lg shadow-golden/30' 
-                    : 'hover:bg-surface-light text-foreground hover:scale-105'
+                  ${
+                    currentPage === item.key
+                      ? "bg-golden text-background shadow-lg shadow-golden/30"
+                      : "hover:bg-surface-light text-foreground hover:scale-105"
                   }
                 `}
               >
@@ -57,24 +62,26 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
             {/* Language Switcher */}
             <div className="flex items-center bg-surface rounded-full p-1">
               <button
-                onClick={() => setLanguage('en')}
+                onClick={() => setLanguage("en")}
                 className={`
                   px-3 py-1 rounded-full text-sm font-medium transition-all duration-300
-                  ${language === 'en' 
-                    ? 'bg-golden text-background shadow-md' 
-                    : 'text-muted-foreground hover:text-foreground'
+                  ${
+                    language === "en"
+                      ? "bg-golden text-background shadow-md"
+                      : "text-muted-foreground hover:text-foreground"
                   }
                 `}
               >
                 EN
               </button>
               <button
-                onClick={() => setLanguage('vn')}
+                onClick={() => setLanguage("vn")}
                 className={`
                   px-3 py-1 rounded-full text-sm font-medium transition-all duration-300
-                  ${language === 'vn' 
-                    ? 'bg-golden text-background shadow-md' 
-                    : 'text-muted-foreground hover:text-foreground'
+                  ${
+                    language === "vn"
+                      ? "bg-golden text-background shadow-md"
+                      : "text-muted-foreground hover:text-foreground"
                   }
                 `}
               >
@@ -111,9 +118,10 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
                 }}
                 className={`
                   w-full justify-start rounded-full transition-all duration-300
-                  ${currentPage === item.key 
-                    ? 'bg-golden text-background shadow-lg shadow-golden/30' 
-                    : 'hover:bg-surface-light'
+                  ${
+                    currentPage === item.key
+                      ? "bg-golden text-background shadow-lg shadow-golden/30"
+                      : "hover:bg-surface-light"
                   }
                 `}
               >
